@@ -1,8 +1,10 @@
 const express = require('express');
 const helmet = require('helmet');
 
-// const cohortsRouter = require('./routers/cohorts-router.js');
-// const studentsRouter = require('./routers/students-router.js');
+const dishesRouter = require('./routers/dishes-router.js');
+const ingredientsRouter = require('./routers/ingredients-router.js');
+const recipesRouter = require('./routers/recipes-router.js');
+
 
 const server = express();
 
@@ -11,8 +13,10 @@ server.use(helmet());
 
 // endpoints here
 
-// server.use('/api/cohorts', cohortsRouter);
-// server.use('/api/students', studentsRouter);
+server.use('/api/dishes', dishesRouter);
+server.use('/api/ingredients', ingredientsRouter);
+server.use('/api/recipes', recipesRouter);
+
 
 const port = 5000;
 server.listen(port, function() {
