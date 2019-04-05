@@ -1,0 +1,8 @@
+exports.seed = function(knex, Promise) {
+  return knex('dishes').insert([
+    {name: 'Pizza'},
+    {name: 'Tacos'},
+    {name: 'Paella'},
+    {name: 'Burgers'}
+  ]);
+};
